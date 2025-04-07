@@ -1,14 +1,18 @@
 <template>
-    <MainLayout>
-        <h1>Index Page</h1>
-        <Link href="/hello">Show Page</Link>
-        <div>The message is {{ message }}</div>
-    </MainLayout>
+    <h1>Index Page</h1>
+    <Link href="/hello">Show Page</Link>
+    <div>The message is {{ message }}</div>
 </template>
 
 <!-- logic section -->
 <script setup>
 import { Link } from '@inertiajs/vue3'
-import MainLayout from '../../Layouts/MainLayout.vue'
 defineProps({ message: String })
+</script>
+
+<script>
+import MainLayout from '../../Layouts/MainLayout.vue'
+export default {
+    layout: MainLayout
+}
 </script>
